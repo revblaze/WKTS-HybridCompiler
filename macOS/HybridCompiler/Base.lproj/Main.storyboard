@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11134" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17701"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -655,6 +656,35 @@
                                     </items>
                                 </menu>
                             </menuItem>
+                            <menuItem title="Debug" id="L4k-vl-cc3">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Debug" id="QxS-1K-vyB">
+                                    <items>
+                                        <menuItem title="Toggle WebView" id="87o-XE-hDK">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <menu key="submenu" title="Toggle WebView" id="cLw-cM-zHf">
+                                                <items>
+                                                    <menuItem title="Python" id="xjy-4K-kqb">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="C" id="1Rs-pA-EHN">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="C++" id="J0v-Yf-Qrg">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                </items>
+                                            </menu>
+                                        </menuItem>
+                                        <menuItem title="Item 2" id="B6x-ex-aMF">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem title="Item 3" id="Gbf-Na-tSe">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
                             <menuItem title="Help" id="wpr-3q-Mcd">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
@@ -673,7 +703,11 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="HybridCompiler" customModuleProvider="target">
+                    <connections>
+                        <outlet property="debugMenu" destination="L4k-vl-cc3" id="ZkJ-A7-LJK"/>
+                    </connections>
+                </customObject>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -683,11 +717,43 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="WKTS Hybrid Compiler" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="contentRect" x="196" y="240" width="900" height="600"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <toolbar key="toolbar" implicitIdentifier="C0F7C4BB-427F-4363-BCC8-986CC60ABADC" autosavesConfiguration="NO" displayMode="iconOnly" sizeMode="regular" id="vco-gW-Buc">
+                            <allowedToolbarItems>
+                                <toolbarItem implicitItemIdentifier="NSToolbarShowColorsItem" id="w9V-2I-1aq"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarShowFontsItem" id="Gpo-o5-f03"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="uoz-6K-Yld"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="cxQ-t2-3Tx"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="ub4-wW-EjC"/>
+                                <toolbarItem implicitItemIdentifier="FE43B395-7397-4A79-8604-3F951710AF47" label="Language" paletteLabel="Language" sizingBehavior="auto" id="fTZ-wT-rhN">
+                                    <nil key="toolTip"/>
+                                    <segmentedControl key="view" verticalHuggingPriority="750" id="UKH-tF-SZc">
+                                        <rect key="frame" x="0.0" y="14" width="113" height="23"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <segmentedCell key="cell" borderStyle="border" alignment="left" style="texturedSquare" trackingMode="selectOne" id="s8d-q8-aeI">
+                                            <font key="font" metaFont="system"/>
+                                            <segments>
+                                                <segment label="Python"/>
+                                                <segment label="C" selected="YES" tag="1"/>
+                                                <segment label="C++"/>
+                                            </segments>
+                                        </segmentedCell>
+                                    </segmentedControl>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="B75E5284-A036-4CF1-9ED4-0F7A18796475" label="Run" paletteLabel="Run" tag="-1" image="play.fill" catalog="system" id="oQ9-gB-7AO">
+                                    <size key="minSize" width="28.5" height="26"/>
+                                    <size key="maxSize" width="28.5" height="26"/>
+                                </toolbarItem>
+                            </allowedToolbarItems>
+                            <defaultToolbarItems>
+                                <toolbarItem reference="ub4-wW-EjC"/>
+                                <toolbarItem reference="fTZ-wT-rhN"/>
+                                <toolbarItem reference="oQ9-gB-7AO"/>
+                            </defaultToolbarItems>
+                        </toolbar>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
                         </connections>
@@ -698,20 +764,93 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="-919" y="402"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="HybridCompiler" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="900" height="600"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <splitView arrangesAllSubviews="NO" dividerStyle="paneSplitter" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4v5-5o-Odq">
+                                <rect key="frame" x="0.0" y="44" width="900" height="556"/>
+                                <subviews>
+                                    <customView fixedFrame="YES" id="uzY-iv-ev5">
+                                        <rect key="frame" x="0.0" y="0.0" width="448" height="556"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </customView>
+                                    <customView fixedFrame="YES" id="DOd-Oc-QuQ">
+                                        <rect key="frame" x="458" y="0.0" width="442" height="556"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </customView>
+                                </subviews>
+                                <holdingPriorities>
+                                    <real value="250"/>
+                                    <real value="250"/>
+                                </holdingPriorities>
+                            </splitView>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="lFh-Xf-AQg">
+                                <rect key="frame" x="0.0" y="0.0" width="900" height="44"/>
+                                <subviews>
+                                    <visualEffectView blendingMode="behindWindow" material="HUDWindow" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="uHK-CT-sVn">
+                                        <rect key="frame" x="0.0" y="0.0" width="900" height="44"/>
+                                        <subviews>
+                                            <textField wantsLayer="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Dcb-ot-XwV">
+                                                <rect key="frame" x="48" y="15" width="854" height="15"/>
+                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" placeholderString="print(&quot;Hello, world!&quot;)" id="0Lh-aY-OiC">
+                                                    <font key="font" size="13" name="SFMono-Regular"/>
+                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Dcb-ot-XwV" firstAttribute="top" secondItem="uHK-CT-sVn" secondAttribute="top" constant="14" id="Kl7-ev-FpC"/>
+                                            <constraint firstAttribute="trailing" secondItem="Dcb-ot-XwV" secondAttribute="trailing" id="YdU-86-LfN"/>
+                                            <constraint firstAttribute="bottom" secondItem="Dcb-ot-XwV" secondAttribute="bottom" constant="15" id="do1-5Z-czV"/>
+                                            <constraint firstItem="Dcb-ot-XwV" firstAttribute="leading" secondItem="uHK-CT-sVn" secondAttribute="leading" constant="50" id="zdm-Nm-4yD"/>
+                                        </constraints>
+                                    </visualEffectView>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1M2-H5-1B3">
+                                        <rect key="frame" x="20" y="13" width="14" height="18"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="&gt;" id="ObC-tU-THx">
+                                            <font key="font" size="15" name="SFMono-Regular"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="1M2-H5-1B3" firstAttribute="leading" secondItem="lFh-Xf-AQg" secondAttribute="leading" constant="22" id="3H2-tH-zc9"/>
+                                    <constraint firstItem="1M2-H5-1B3" firstAttribute="top" secondItem="lFh-Xf-AQg" secondAttribute="top" constant="13" id="5Ka-fy-kjG"/>
+                                    <constraint firstItem="uHK-CT-sVn" firstAttribute="top" secondItem="lFh-Xf-AQg" secondAttribute="top" id="Go2-fO-pXt"/>
+                                    <constraint firstAttribute="height" constant="44" id="M3N-Jd-zFW"/>
+                                    <constraint firstItem="uHK-CT-sVn" firstAttribute="leading" secondItem="lFh-Xf-AQg" secondAttribute="leading" id="XXx-yv-sOW"/>
+                                    <constraint firstAttribute="trailing" secondItem="uHK-CT-sVn" secondAttribute="trailing" id="dzi-2h-t0x"/>
+                                    <constraint firstAttribute="bottom" secondItem="uHK-CT-sVn" secondAttribute="bottom" id="vxg-8D-ZQ1"/>
+                                    <constraint firstAttribute="bottom" secondItem="1M2-H5-1B3" secondAttribute="bottom" constant="13" id="wi4-xG-gIp"/>
+                                </constraints>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="4v5-5o-Odq" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="4NF-7X-vjC"/>
+                            <constraint firstItem="lFh-Xf-AQg" firstAttribute="top" secondItem="4v5-5o-Odq" secondAttribute="bottom" id="7OZ-Vu-ZL7"/>
+                            <constraint firstAttribute="trailing" secondItem="4v5-5o-Odq" secondAttribute="trailing" id="EW4-dG-igh"/>
+                            <constraint firstItem="4v5-5o-Odq" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="KTV-DM-Rrn"/>
+                            <constraint firstAttribute="bottom" secondItem="lFh-Xf-AQg" secondAttribute="bottom" id="Q2v-Uw-hoB"/>
+                            <constraint firstAttribute="trailing" secondItem="lFh-Xf-AQg" secondAttribute="trailing" id="TRZ-Te-Dqy"/>
+                            <constraint firstItem="lFh-Xf-AQg" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="mn3-g9-FkQ"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="74" y="402"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="play.fill" catalog="system" width="12" height="13"/>
+    </resources>
 </document>
