@@ -11,6 +11,17 @@
 		C248D3D925F4150B0055EF56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C248D3D825F4150B0055EF56 /* ViewController.swift */; };
 		C248D3DB25F4150C0055EF56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C248D3DA25F4150C0055EF56 /* Assets.xcassets */; };
 		C248D3DE25F4150C0055EF56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C248D3DC25F4150C0055EF56 /* Main.storyboard */; };
+		C248D3FE25F418D00055EF56 /* TSConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C248D3EF25F418CF0055EF56 /* TSConfig.swift */; };
+		C248D3FF25F418D00055EF56 /* WKGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C248D3F225F418CF0055EF56 /* WKGenerated.swift */; };
+		C248D40025F418D00055EF56 /* WKExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C248D3F325F418CF0055EF56 /* WKExtensions.swift */; };
+		C248D40125F418D00055EF56 /* TypeScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = C248D3F425F418CF0055EF56 /* TypeScript.swift */; };
+		C248D40225F418D00055EF56 /* TS+global.swift in Sources */ = {isa = PBXBuildFile; fileRef = C248D3F625F418CF0055EF56 /* TS+global.swift */; };
+		C248D40325F418D00055EF56 /* TS+index.swift in Sources */ = {isa = PBXBuildFile; fileRef = C248D3F725F418CF0055EF56 /* TS+index.swift */; };
+		C248D40425F418D00055EF56 /* TS+mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C248D3F825F418CF0055EF56 /* TS+mode.swift */; };
+		C248D40525F418D00055EF56 /* TS+player.swift in Sources */ = {isa = PBXBuildFile; fileRef = C248D3F925F418CF0055EF56 /* TS+player.swift */; };
+		C248D40625F418D00055EF56 /* TSUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C248D3FB25F418D00055EF56 /* TSUtility.swift */; };
+		C248D40725F418D00055EF56 /* TSFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C248D3FC25F418D00055EF56 /* TSFunction.swift */; };
+		C248D40825F418D00055EF56 /* JavaScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = C248D3FD25F418D00055EF56 /* JavaScript.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +32,17 @@
 		C248D3DD25F4150C0055EF56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C248D3DF25F4150C0055EF56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C248D3E025F4150C0055EF56 /* HybridCompiler.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HybridCompiler.entitlements; sourceTree = "<group>"; };
+		C248D3EF25F418CF0055EF56 /* TSConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSConfig.swift; sourceTree = "<group>"; };
+		C248D3F225F418CF0055EF56 /* WKGenerated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKGenerated.swift; sourceTree = "<group>"; };
+		C248D3F325F418CF0055EF56 /* WKExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKExtensions.swift; sourceTree = "<group>"; };
+		C248D3F425F418CF0055EF56 /* TypeScript.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeScript.swift; sourceTree = "<group>"; };
+		C248D3F625F418CF0055EF56 /* TS+global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TS+global.swift"; sourceTree = "<group>"; };
+		C248D3F725F418CF0055EF56 /* TS+index.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TS+index.swift"; sourceTree = "<group>"; };
+		C248D3F825F418CF0055EF56 /* TS+mode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TS+mode.swift"; sourceTree = "<group>"; };
+		C248D3F925F418CF0055EF56 /* TS+player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TS+player.swift"; sourceTree = "<group>"; };
+		C248D3FB25F418D00055EF56 /* TSUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSUtility.swift; sourceTree = "<group>"; };
+		C248D3FC25F418D00055EF56 /* TSFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSFunction.swift; sourceTree = "<group>"; };
+		C248D3FD25F418D00055EF56 /* JavaScript.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JavaScript.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,19 +79,78 @@
 				C248D3D825F4150B0055EF56 /* ViewController.swift */,
 				C248D3DA25F4150C0055EF56 /* Assets.xcassets */,
 				C248D3DC25F4150C0055EF56 /* Main.storyboard */,
-				C248D3EB25F417CC0055EF56 /* TypeScript */,
+				C248D3EC25F418CF0055EF56 /* Shared */,
 				C248D3DF25F4150C0055EF56 /* Info.plist */,
 				C248D3E025F4150C0055EF56 /* HybridCompiler.entitlements */,
 			);
 			path = HybridCompiler;
 			sourceTree = "<group>";
 		};
-		C248D3EB25F417CC0055EF56 /* TypeScript */ = {
+		C248D3EC25F418CF0055EF56 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				C248D3ED25F418CF0055EF56 /* TypeScript */,
 			);
-			name = TypeScript;
-			path = ../../Shared/TypeScript;
+			name = Shared;
+			path = ../../Shared;
+			sourceTree = "<group>";
+		};
+		C248D3ED25F418CF0055EF56 /* TypeScript */ = {
+			isa = PBXGroup;
+			children = (
+				C248D3EE25F418CF0055EF56 /* Configuration */,
+				C248D3F025F418CF0055EF56 /* Extensions */,
+				C248D3F425F418CF0055EF56 /* TypeScript.swift */,
+				C248D3F525F418CF0055EF56 /* Files */,
+				C248D3FA25F418CF0055EF56 /* Helpers */,
+			);
+			path = TypeScript;
+			sourceTree = "<group>";
+		};
+		C248D3EE25F418CF0055EF56 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				C248D3EF25F418CF0055EF56 /* TSConfig.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		C248D3F025F418CF0055EF56 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C248D3F125F418CF0055EF56 /* Generated */,
+				C248D3F325F418CF0055EF56 /* WKExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C248D3F125F418CF0055EF56 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				C248D3F225F418CF0055EF56 /* WKGenerated.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		C248D3F525F418CF0055EF56 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				C248D3F625F418CF0055EF56 /* TS+global.swift */,
+				C248D3F725F418CF0055EF56 /* TS+index.swift */,
+				C248D3F825F418CF0055EF56 /* TS+mode.swift */,
+				C248D3F925F418CF0055EF56 /* TS+player.swift */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
+		C248D3FA25F418CF0055EF56 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C248D3FB25F418D00055EF56 /* TSUtility.swift */,
+				C248D3FC25F418D00055EF56 /* TSFunction.swift */,
+				C248D3FD25F418D00055EF56 /* JavaScript.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,7 +222,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C248D40225F418D00055EF56 /* TS+global.swift in Sources */,
+				C248D40525F418D00055EF56 /* TS+player.swift in Sources */,
+				C248D3FE25F418D00055EF56 /* TSConfig.swift in Sources */,
+				C248D40625F418D00055EF56 /* TSUtility.swift in Sources */,
+				C248D40725F418D00055EF56 /* TSFunction.swift in Sources */,
+				C248D3FF25F418D00055EF56 /* WKGenerated.swift in Sources */,
+				C248D40325F418D00055EF56 /* TS+index.swift in Sources */,
 				C248D3D925F4150B0055EF56 /* ViewController.swift in Sources */,
+				C248D40825F418D00055EF56 /* JavaScript.swift in Sources */,
+				C248D40425F418D00055EF56 /* TS+mode.swift in Sources */,
+				C248D40025F418D00055EF56 /* WKExtensions.swift in Sources */,
+				C248D40125F418D00055EF56 /* TypeScript.swift in Sources */,
 				C248D3D725F4150B0055EF56 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
