@@ -57,10 +57,19 @@
 				C248D3D825F4150B0055EF56 /* ViewController.swift */,
 				C248D3DA25F4150C0055EF56 /* Assets.xcassets */,
 				C248D3DC25F4150C0055EF56 /* Main.storyboard */,
+				C248D3EB25F417CC0055EF56 /* TypeScript */,
 				C248D3DF25F4150C0055EF56 /* Info.plist */,
 				C248D3E025F4150C0055EF56 /* HybridCompiler.entitlements */,
 			);
 			path = HybridCompiler;
+			sourceTree = "<group>";
+		};
+		C248D3EB25F417CC0055EF56 /* TypeScript */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = TypeScript;
+			path = ../../Shared/TypeScript;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
