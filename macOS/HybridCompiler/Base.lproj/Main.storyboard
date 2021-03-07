@@ -731,14 +731,14 @@
                                 <toolbarItem implicitItemIdentifier="FE43B395-7397-4A79-8604-3F951710AF47" label="Language" paletteLabel="Language" sizingBehavior="auto" id="fTZ-wT-rhN">
                                     <nil key="toolTip"/>
                                     <segmentedControl key="view" verticalHuggingPriority="750" id="UKH-tF-SZc">
-                                        <rect key="frame" x="0.0" y="14" width="113" height="23"/>
+                                        <rect key="frame" x="0.0" y="14" width="162" height="23"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <segmentedCell key="cell" borderStyle="border" alignment="left" style="texturedSquare" trackingMode="selectOne" id="s8d-q8-aeI">
                                             <font key="font" metaFont="system"/>
                                             <segments>
-                                                <segment label="Python"/>
-                                                <segment label="C" selected="YES" tag="1"/>
-                                                <segment label="C++"/>
+                                                <segment label="Python" width="60"/>
+                                                <segment label="C" width="40" selected="YES" tag="1"/>
+                                                <segment label="C++" width="46"/>
                                             </segments>
                                         </segmentedCell>
                                     </segmentedControl>
@@ -774,16 +774,124 @@
                         <rect key="frame" x="0.0" y="0.0" width="900" height="600"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <splitView arrangesAllSubviews="NO" dividerStyle="paneSplitter" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4v5-5o-Odq">
-                                <rect key="frame" x="0.0" y="44" width="900" height="556"/>
+                            <splitView hidden="YES" arrangesAllSubviews="NO" dividerStyle="thin" translatesAutoresizingMaskIntoConstraints="NO" id="0YR-7O-b3n">
+                                <rect key="frame" x="0.0" y="0.0" width="900" height="600"/>
                                 <subviews>
-                                    <customView fixedFrame="YES" id="uzY-iv-ev5">
-                                        <rect key="frame" x="0.0" y="0.0" width="448" height="556"/>
+                                    <customView fixedFrame="YES" id="kZ2-XM-MhS">
+                                        <rect key="frame" x="0.0" y="0.0" width="900" height="292"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </customView>
-                                    <customView fixedFrame="YES" id="DOd-Oc-QuQ">
-                                        <rect key="frame" x="458" y="0.0" width="442" height="556"/>
+                                    <customView fixedFrame="YES" id="9f3-aZ-kNM">
+                                        <rect key="frame" x="0.0" y="293" width="900" height="307"/>
                                         <autoresizingMask key="autoresizingMask"/>
+                                    </customView>
+                                </subviews>
+                                <holdingPriorities>
+                                    <real value="250"/>
+                                    <real value="250"/>
+                                </holdingPriorities>
+                            </splitView>
+                            <splitView arrangesAllSubviews="NO" dividerStyle="thin" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4v5-5o-Odq">
+                                <rect key="frame" x="0.0" y="44" width="900" height="556"/>
+                                <subviews>
+                                    <customView ambiguous="YES" id="uzY-iv-ev5">
+                                        <rect key="frame" x="0.0" y="0.0" width="453" height="556"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <subviews>
+                                            <scrollView ambiguous="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNN-Mj-myf">
+                                                <rect key="frame" x="0.0" y="0.0" width="448" height="556"/>
+                                                <clipView key="contentView" ambiguous="YES" drawsBackground="NO" id="5E3-fu-hm3">
+                                                    <rect key="frame" x="0.0" y="0.0" width="448" height="556"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <textView ambiguous="YES" drawsBackground="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="uU9-7s-aR9">
+                                                            <rect key="frame" x="0.0" y="0.0" width="440" height="546"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                            <size key="minSize" width="440" height="546"/>
+                                                            <size key="maxSize" width="448" height="10000000"/>
+                                                            <attributedString key="textStorage">
+                                                                <fragment>
+                                                                    <string key="content"># Online Python compiler (interpreter) to run Python online.
+# Write Python 3 code in this online editor and run it.
+print("Hello world")</string>
+                                                                    <attributes>
+                                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                        <font key="NSFont" size="12" name="SFMono-Regular"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        </textView>
+                                                    </subviews>
+                                                </clipView>
+                                                <edgeInsets key="contentInsets" left="8" right="0.0" top="10" bottom="0.0"/>
+                                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="4mS-Gd-AlO">
+                                                    <rect key="frame" x="-100" y="-100" width="240" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </scroller>
+                                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="YWL-Ev-Cu4">
+                                                    <rect key="frame" x="432" y="10" width="16" height="546"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </scroller>
+                                            </scrollView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="xNN-Mj-myf" firstAttribute="leading" secondItem="uzY-iv-ev5" secondAttribute="leading" id="Z4C-Ku-mV3"/>
+                                            <constraint firstAttribute="trailing" secondItem="xNN-Mj-myf" secondAttribute="trailing" id="Zxi-Yk-lzp"/>
+                                            <constraint firstItem="xNN-Mj-myf" firstAttribute="top" secondItem="uzY-iv-ev5" secondAttribute="top" id="aNh-DD-QbI"/>
+                                            <constraint firstAttribute="bottom" secondItem="xNN-Mj-myf" secondAttribute="bottom" id="bFx-EX-QUa"/>
+                                        </constraints>
+                                    </customView>
+                                    <customView ambiguous="YES" id="DOd-Oc-QuQ">
+                                        <rect key="frame" x="454" y="0.0" width="446" height="556"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <subviews>
+                                            <scrollView ambiguous="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFx-Pe-aXB">
+                                                <rect key="frame" x="0.0" y="0.0" width="442" height="556"/>
+                                                <clipView key="contentView" ambiguous="YES" drawsBackground="NO" id="ygD-I8-ZLc">
+                                                    <rect key="frame" x="0.0" y="0.0" width="442" height="556"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <textView ambiguous="YES" drawsBackground="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="5hm-zt-jAo">
+                                                            <rect key="frame" x="0.0" y="0.0" width="433" height="546"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                            <size key="minSize" width="433" height="546"/>
+                                                            <size key="maxSize" width="442" height="10000000"/>
+                                                            <attributedString key="textStorage">
+                                                                <fragment content="Hello, world!">
+                                                                    <attributes>
+                                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                        <font key="NSFont" size="12" name="SFMono-Regular"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        </textView>
+                                                    </subviews>
+                                                    <edgeInsets key="contentInsets" left="8" right="0.0" top="10" bottom="0.0"/>
+                                                </clipView>
+                                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="c4L-cr-DB4">
+                                                    <rect key="frame" x="-100" y="-100" width="240" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </scroller>
+                                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="u7M-IM-ENR">
+                                                    <rect key="frame" x="426" y="0.0" width="16" height="556"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </scroller>
+                                            </scrollView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="wFx-Pe-aXB" firstAttribute="top" secondItem="DOd-Oc-QuQ" secondAttribute="top" id="ELZ-Ud-Sel"/>
+                                            <constraint firstAttribute="bottom" secondItem="wFx-Pe-aXB" secondAttribute="bottom" id="agS-gh-Gx5"/>
+                                            <constraint firstItem="wFx-Pe-aXB" firstAttribute="leading" secondItem="DOd-Oc-QuQ" secondAttribute="leading" id="iEu-5j-5dt"/>
+                                            <constraint firstAttribute="trailing" secondItem="wFx-Pe-aXB" secondAttribute="trailing" id="mdv-ZR-yO1"/>
+                                        </constraints>
                                     </customView>
                                 </subviews>
                                 <holdingPriorities>
@@ -794,7 +902,7 @@
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="lFh-Xf-AQg">
                                 <rect key="frame" x="0.0" y="0.0" width="900" height="44"/>
                                 <subviews>
-                                    <visualEffectView blendingMode="behindWindow" material="HUDWindow" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="uHK-CT-sVn">
+                                    <visualEffectView blendingMode="behindWindow" material="sidebar" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="uHK-CT-sVn">
                                         <rect key="frame" x="0.0" y="0.0" width="900" height="44"/>
                                         <subviews>
                                             <textField wantsLayer="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Dcb-ot-XwV">
@@ -835,13 +943,17 @@
                             </customView>
                         </subviews>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="0YR-7O-b3n" secondAttribute="bottom" id="1ew-sB-g10"/>
                             <constraint firstItem="4v5-5o-Odq" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="4NF-7X-vjC"/>
                             <constraint firstItem="lFh-Xf-AQg" firstAttribute="top" secondItem="4v5-5o-Odq" secondAttribute="bottom" id="7OZ-Vu-ZL7"/>
                             <constraint firstAttribute="trailing" secondItem="4v5-5o-Odq" secondAttribute="trailing" id="EW4-dG-igh"/>
                             <constraint firstItem="4v5-5o-Odq" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="KTV-DM-Rrn"/>
+                            <constraint firstAttribute="trailing" secondItem="0YR-7O-b3n" secondAttribute="trailing" id="N5I-az-XFk"/>
                             <constraint firstAttribute="bottom" secondItem="lFh-Xf-AQg" secondAttribute="bottom" id="Q2v-Uw-hoB"/>
                             <constraint firstAttribute="trailing" secondItem="lFh-Xf-AQg" secondAttribute="trailing" id="TRZ-Te-Dqy"/>
+                            <constraint firstItem="0YR-7O-b3n" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="UnP-Yu-E6Z"/>
                             <constraint firstItem="lFh-Xf-AQg" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="mn3-g9-FkQ"/>
+                            <constraint firstItem="0YR-7O-b3n" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="pTd-Co-BmD"/>
                         </constraints>
                     </view>
                 </viewController>
